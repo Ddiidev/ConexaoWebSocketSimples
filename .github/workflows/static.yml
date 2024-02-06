@@ -1,0 +1,20 @@
+name: GitHub Actions Demo
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código do repositório
+        uses: actions/checkout@v2
+      - name: Deploy da pasta websocketteste
+        run: |
+          mkdir -p dist
+          cp -r websocketteste/* dist/
+      - name: Publicar no GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages
+          folder: dist
