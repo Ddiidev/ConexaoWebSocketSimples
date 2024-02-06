@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "vZk/szBEjxE3NLzakdTjUZqSjcAadMnOcXRNxgs7VtF1mT/MEZiBTwQa1M4ryUOSh4CA6UmiiIo7qJ3ej94QYQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\andre\\source\\repos\\ResolutiServiceClient\\ResolutiServiceClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\andre\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.0\\microsoft.dotnet.ilcompiler.8.0.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.0\\microsoft.net.illink.tasks.8.0.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.net.websockets\\4.3.0\\system.net.websockets.4.3.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.0\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
