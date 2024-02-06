@@ -1,0 +1,15 @@
+C:\Users\andre\source\repos\ResolutiServiceClient\bin\Release\net8.0\ResolutiServiceClient.exe
+C:\Users\andre\source\repos\ResolutiServiceClient\bin\Release\net8.0\ResolutiServiceClient.deps.json
+C:\Users\andre\source\repos\ResolutiServiceClient\bin\Release\net8.0\ResolutiServiceClient.runtimeconfig.json
+C:\Users\andre\source\repos\ResolutiServiceClient\bin\Release\net8.0\ResolutiServiceClient.dll
+C:\Users\andre\source\repos\ResolutiServiceClient\bin\Release\net8.0\ResolutiServiceClient.pdb
+C:\Users\andre\source\repos\ResolutiServiceClient\obj\Release\net8.0\ResolutiServiceClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\source\repos\ResolutiServiceClient\obj\Release\net8.0\ResolutiServiceClient.AssemblyInfoInputs.cache
+C:\Users\andre\source\repos\ResolutiServiceClient\obj\Release\net8.0\ResolutiServiceClient.AssemblyInfo.cs
+C:\Users\andre\source\repos\ResolutiServiceClient\obj\Release\net8.0\ResolutiServiceClient.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\ResolutiServiceClient\obj\Release\net8.0\ResolutiServiceClient.sourcelink.json
+C:\Users\andre\source\repos\ResolutiServiceClient\obj\Release\net8.0\ResolutiServiceClient.dll
+C:\Users\andre\source\repos\ResolutiServiceClient\obj\Release\net8.0\refint\ResolutiServiceClient.dll
+C:\Users\andre\source\repos\ResolutiServiceClient\obj\Release\net8.0\ResolutiServiceClient.pdb
+C:\Users\andre\source\repos\ResolutiServiceClient\obj\Release\net8.0\ResolutiServiceClient.genruntimeconfig.cache
+C:\Users\andre\source\repos\ResolutiServiceClient\obj\Release\net8.0\ref\ResolutiServiceClient.dll

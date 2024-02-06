@@ -12,3 +12,4 @@ C:\Users\andre\source\repos\ResolutiServiceClient\obj\Debug\net8.0\refint\Resolu
 C:\Users\andre\source\repos\ResolutiServiceClient\obj\Debug\net8.0\ResolutiServiceClient.pdb
 C:\Users\andre\source\repos\ResolutiServiceClient\obj\Debug\net8.0\ResolutiServiceClient.genruntimeconfig.cache
 C:\Users\andre\source\repos\ResolutiServiceClient\obj\Debug\net8.0\ref\ResolutiServiceClient.dll
+C:\Users\andre\source\repos\ResolutiServiceClient\obj\Debug\net8.0\ResolutiServiceClient.sourcelink.json

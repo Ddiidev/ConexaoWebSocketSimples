@@ -1,0 +1,2 @@
+C:\Users\andre\source\repos\ResolutiServiceClient\bin\Release\net8.0\publish\win-x64\ResolutiServiceClient.pdb
+C:\Users\andre\source\repos\ResolutiServiceClient\bin\Release\net8.0\publish\win-x64\ResolutiServiceClient.exe

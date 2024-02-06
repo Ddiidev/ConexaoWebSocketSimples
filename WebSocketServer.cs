@@ -9,7 +9,6 @@ namespace ResolutiServiceClient.WebSocket
 	// It expects to receive binary data and it streams back the data as it receives it.
 	// The [source](https://github.com/paulbatum/WebSocket-Samples) for this sample
 	// is on GitHub.
-
 	public class WebSocketServer
 	{
 
@@ -45,9 +44,6 @@ namespace ResolutiServiceClient.WebSocket
 
 			try
 			{
-
-				// When calling `AcceptWebSocketAsync` the subprotocol must be specified.
-				// This sample assumes that no subprotocol was requested.
 				webSocketContext = await listenerContext.AcceptWebSocketAsync(subProtocol: null);
 				Interlocked.Increment(ref count);
 				Console.WriteLine("Processed: {0}", count);
@@ -55,10 +51,6 @@ namespace ResolutiServiceClient.WebSocket
 			}
 			catch (Exception e)
 			{
-
-				// The upgrade process failed somehow.
-				// For simplicity lets assume it was a failure on
-				// the part of the server and indicate this using 500.
 				listenerContext.Response.StatusCode = 500;
 				listenerContext.Response.Close();
 				Console.WriteLine("Exception: {0}", e);
@@ -70,21 +62,16 @@ namespace ResolutiServiceClient.WebSocket
 
 			try
 			{
-
-				// The buffer will be reused as we only need to hold on to the data
-				// long enough to send it back to the sender (this is an echo server).
 				byte[] receiveBuffer = new byte[1024];
 
-				// loop de novos dados
 				while (webSocket.State == WebSocketState.Open)
 				{
-
+					receiveBuffer = new byte[1024];
 					WebSocketReceiveResult receiveResult = await webSocket.ReceiveAsync(
 						new ArraySegment<byte>(receiveBuffer),
 						CancellationToken.None // We are not using timeouts
 					);
 
-					// client requested the connection to close
 					if (receiveResult.MessageType == WebSocketMessageType.Close)
 					{
 
@@ -98,7 +85,9 @@ namespace ResolutiServiceClient.WebSocket
 					}
 					else if (receiveResult.MessageType == WebSocketMessageType.Text)
 					{
-						var data = Encoding.UTF8.GetBytes("hello!");
+						var msgReceive = Encoding.ASCII.GetString(receiveBuffer);
+						Console.WriteLine((msgReceive ?? "").Trim());
+						var data = Encoding.UTF8.GetBytes($"ola, a sua msg: {msgReceive} [{DateTime.Now:ddd-MMM-yy HH:mm:ss}]");
 
 						await webSocket.SendAsync(
 					new ArraySegment<byte>(data, 0, data.Length),
@@ -106,19 +95,9 @@ namespace ResolutiServiceClient.WebSocket
 							receiveResult.EndOfMessage,
 							CancellationToken.None
 						);
-						// we are not handling text in this example so we close the connection
-						//await webSocket.CloseAsync(
-						//	WebSocketCloseStatus.InvalidMessageType,
-						//	"Cannot accept text frame",
-						//	CancellationToken.None
-						//);
 					}
 					else
 					{
-						// Note the use of the `EndOfMessage` flag on the receive result.
-						// This means that if this echo server is sent one continuous stream
-						// of binary data (with EndOfMessage always false) it will just stream
-						// back the same thing.
 						await webSocket.SendAsync(
 							new ArraySegment<byte>(receiveBuffer, 0, receiveResult.Count),
 							WebSocketMessageType.Binary,
@@ -133,17 +112,11 @@ namespace ResolutiServiceClient.WebSocket
 			}
 			catch (Exception e)
 			{
-
-				// Pretty much any exception that occurs when calling `SendAsync`,
-				// `ReceiveAsync` or `CloseAsync` is unrecoverable in that it will abort
-				// the connection and leave the `WebSocket` instance in an unusable state.
 				Console.WriteLine("Exception: {0}", e);
 
 			}
 			finally
 			{
-
-				// Clean up by disposing the WebSocket once it is closed/aborted.
 				if (webSocket != null)
 				{
 					webSocket.Dispose();

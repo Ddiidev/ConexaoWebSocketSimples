@@ -1,28 +1,37 @@
+var socket = new WebSocket("ws://localhost:30505");
+
 (async function main() {
+  socket.onopen = function (e) {
+    addToList("[open] Connection established");
+    socket.send(" conected ");
+  };
 
-    let socket = new WebSocket("ws://localhost:30505");
+  socket.onmessage = function (event) {
+    addToList(event.data);
+  };
 
-    socket.onopen = function(e) {
-        console.log("[open] Connection established");
-        socket.send("My name is John");
-      };
-      
-      socket.onmessage = function(event) {
-        console.log(`[message] Data received from server: ${event.data}`);
-      };
-      
-      socket.onclose = function(event) {
-        if (event.wasClean) {
-            console.log(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
-        } else {
-          // e.g. server process killed or network down
-          // event.code is usually 1006 in this case
-          console.log('[close] Connection died');
-        }
-      };
-      
-      socket.onerror = function(error) {
-        console.log(`[error]`);
-      };
+  socket.onclose = function (event) {
+    if (event.wasClean) {
+      addToList(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+    } else {
+      addToList('[close] Connection died');
+    }
+  };
+
+  socket.onerror = function (error) {
+    // console.log(`[error]`);
+  };
 
 })();
+
+function sendMsg() {
+  const msgSocket = document.getElementById("msgSocket").value;
+
+  socket.send(msgSocket);
+}
+
+function addToList(data) {
+  const msgs = document.getElementById("msgs");
+
+  msgs.innerHTML += `<li> ${data} </li>`
+}

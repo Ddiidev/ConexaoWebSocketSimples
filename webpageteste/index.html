@@ -7,5 +7,31 @@
 </head>
 <body>
     <script src="./index.js"></script>
+
+    <input placeholder="menssagem socket" id="msgSocket"/>
+    <button onclick="sendMsg()">Enviar</button>
+
+    <div style="margin: 10px;">
+        >> Menssagens
+
+        <ul id="msgs">
+        </ul>
+    </div>
 </body>
+
+
+<style>
+input {
+    width: 350px;
+    height: 50px;
+}
+button {
+    width: 250px;
+    height: 58px;
+}
+
+ul {
+    list-style: none;
+}
+</style>
 </html>

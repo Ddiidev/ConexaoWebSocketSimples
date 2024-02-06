@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ResolutiServiceClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+960af36e992f9c3c331be1670a8b6b179073c61f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ResolutiServiceClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ResolutiServiceClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
